@@ -4,9 +4,6 @@
   security = {
     sudo = {
       enable = false;
-#      configFile = ''
-#        %wheel ALL=(ALL) ALL
-#      '';
     };
     doas = {
       enable = true;

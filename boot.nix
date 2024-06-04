@@ -2,6 +2,7 @@
 
 {
   boot = {
+    kernelPackages = pkgs.linuxKernel.kernels.linux_zen
     loader = {
       efi.canTouchEfiVariables = true;
       grub = {
@@ -13,7 +14,7 @@
     initrd = {
       systemd.enable = true;
       luks.devices."luks_lvm" = {
-        device = "/dev/disk/by-uuid/0abf0f5e-4766-42ca-ab88-20dcca72a87d";
+        device = "/dev/disk/by-label/LUKS";
         preLVM = true;
         allowDiscards = true;
       };
@@ -24,6 +25,5 @@
       theme = "bgrt";
     };
     kernelParams = ["splash" "quiet"];
-#    environment.systemPackage = [plymouth];
   };
 }

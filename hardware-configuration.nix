@@ -18,18 +18,19 @@
   
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/c2c40475-6a6e-43ff-a163-2b84dfaad855";
+      device = "/dev/disk/by-label/ROOT";
       fsType = "ext4";
     };
     "/boot" = {
-      device = "/dev/disk/by-uuid/78DC-DC01";
+      device = "/dev/disk/by-label/BOOT";
       fsType = "vfat";
+      options = [ "fmask=0022" "dmask=0022" ];
     };
   };
   
   swapDevices = [ 
     {
-      device = "/dev/disk/by-uuid/ec2857c1-f1ae-4b7a-8b47-222f73663546";
+      device = "/dev/disk/by-label/SWAP";
     }    
   ];
 
