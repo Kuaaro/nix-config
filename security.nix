@@ -1,6 +1,10 @@
 { config, pkgs,... }:
 
 {
+  #environment.systemPackages = with pkgs.unstable[
+  #  doas
+  #  fprintd
+  #];
   security = {
     sudo = {
       enable = false;
@@ -14,4 +18,5 @@
       }];
     };
   };
+  services.fprintd.enable = true;
 }

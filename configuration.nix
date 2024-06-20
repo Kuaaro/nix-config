@@ -17,6 +17,7 @@
       ./locale.nix
       ./boot.nix
       ./services.nix
+      #./unstable.nix
     ];
 
   #networking.hostName = "kuaaros-framework"; # Define your hostname.
@@ -38,14 +39,6 @@
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
   
 
   # Configure keymap in X11
@@ -116,7 +109,7 @@
   # and migrated your data accordingly.
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "24.05"; # Did you read the comment?
 
 }
 
