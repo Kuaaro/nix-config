@@ -9,17 +9,21 @@
     [
       ./bluetooth.nix
       ./bootloader.nix
-      ./cleaning.nix
+      #./cleaning.nix
+      #./display_manager.nix
       ./hardware_configuration.nix
+      #./hyprland.nix
       ./kernel.nix
       ./mac_randomizer.nix
       ./networking.nix
       ./nix-pkgs.nix
-      ./nix-settings.nix
+      #./nix-settings.nix
       ./printing.nix
       ./programming_languages.nix
       ./security.nix
+      ./shells.nix
       ./simple_programs.nix
+      ./unstable.nix
       ./users.nix
     ];
 
