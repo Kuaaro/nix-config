@@ -13,5 +13,5 @@
     #maybe btop
     #maybe zfxtop
     speedtest-rs
-  ]
+  ];
 }
