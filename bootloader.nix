@@ -10,6 +10,11 @@
     initrd = {
       enable = true;
       systemd.enable = true;
+      luks.devices."luks_lvm" = {
+        device = "/dev/disk/by-label/LUKS";
+        preLVM = true;
+        allowDiscards = true;
+      };
       verbose = false;
     };
     consoleLogLevel = 3;
