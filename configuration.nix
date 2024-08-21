@@ -11,7 +11,7 @@
       ./bootloader.nix
       #./cleaning.nix
       #./display_manager.nix
-      ./hardware_configuration.nix
+      ./hardware-configuration.nix
       #./hyprland.nix
       ./kernel.nix
       ./mac_randomizer.nix
