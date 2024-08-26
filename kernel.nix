@@ -7,15 +7,15 @@
     "quiet"
     "fbcon=nodefer"
     "vt.global_cursor_default=0"
-    "kernel.modules_disabled=1"
-    "lsm=landlock,lockdown,yama,integrity,apparmor,bpf,tomoyo,selinux"
+    #"kernel.modules_disabled=1"
+    #"lsm=landlock,lockdown,yama,integrity,apparmor,bpf,tomoyo,selinux"
     "video4linux"
-    "security=selinux"
+    #"security=selinux"
   ];
 
-  systemd.package = pkgs.systemd.override { withSelinux = true; };
+  #systemd.package = pkgs.systemd.override { withSelinux = true; };
 
-  environment.systemPackages = with pkgs; [
-    policycoreutils
-  ];
+  #environment.systemPackages = with pkgs; [
+  #  policycoreutils
+  #];
 }

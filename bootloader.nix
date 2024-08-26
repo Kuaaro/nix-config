@@ -20,8 +20,10 @@
     consoleLogLevel = 3;
     plymouth = {
       enable = true;
-      themePackages = [ pkgs.catppuccin-plymouth ];
-      theme = "catppuccin-macchiato";
+      themePackages = [ pkgs.adi1090x-plymouth-themes ];
+      theme = "loader";
+    #  themePackages = [ pkgs.catppuccin-plymouth ];
+    #  theme = "catppuccin-macchiato";
     };
     kernelParams = ["splash" "quiet"];
   };
