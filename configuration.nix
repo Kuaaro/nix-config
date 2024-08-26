@@ -18,6 +18,7 @@
       ./networking.nix
       ./nix-pkgs.nix
       #./nix-settings.nix
+      ./nvim.nix
       ./printing.nix
       ./programming_languages.nix
       ./security.nix
