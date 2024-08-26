@@ -4,10 +4,10 @@
   users = {
     users."kuaaro" = {
       isNormalUser = true;
-      extraGroups = [ "doas_group" "networkmanager"];
+      uid = 1000;
+      extraGroups = ["networkmanager"];
       shell = pkgs.fish;
     };
 
-    groups."doas_group" = {};
   };
 }

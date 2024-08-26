@@ -1,10 +1,18 @@
-{ config, pkgs,... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
+  #Fetchers
     neofetch
-    gparted
-    #tor
-# plymouth themes    adi1090x-plymouth-themes
+    #onefetch
+    ipfetch
+    cpufetch
+    ramfetch
+    #htop
+    #bottom
+    #maybe btop
+    #maybe zfxtop
+    speedtest-rs
+    localsend
   ];
 }

@@ -1,17 +1,14 @@
-{ config, pkgs,... }:
+{ pkgs,  ... }:
 
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages_zen;
     loader = {
+      systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
-      grub = {
-        enable = true;
-        device = "nodev";
-        efiSupport = true;
-      };
+      timeout = 2;
     };
     initrd = {
+      enable = true;
       systemd.enable = true;
       luks.devices."luks_lvm" = {
         device = "/dev/disk/by-label/LUKS";
@@ -20,9 +17,13 @@
       };
       verbose = false;
     };
+    consoleLogLevel = 3;
     plymouth = {
       enable = true;
-      theme = "bgrt";
+      themePackages = [ pkgs.adi1090x-plymouth-themes ];
+      theme = "loader";
+    #  themePackages = [ pkgs.catppuccin-plymouth ];
+    #  theme = "catppuccin-macchiato";
     };
     kernelParams = ["splash" "quiet"];
   };
