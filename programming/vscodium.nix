@@ -10,7 +10,9 @@
       vscodeExtensions = with vscode-extensions; [
         #bbenoist.nix
         #ms-python.python
-	rust-lang.rust-analyzer
+        rust-lang.rust-analyzer
+        ziglang.vscode-zig
+        phind.phind
       ];
     })
   ];

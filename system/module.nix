@@ -11,4 +11,5 @@
     ./shells.nix
     ./users.nix
   ];
+  services.automatic-timezoned.enable = true;
 }

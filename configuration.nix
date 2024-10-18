@@ -7,10 +7,10 @@
 {
   imports =
     [ 
-      ./graphical_session/default.nix
-      ./programming/default.nix
-      ./programs/default.nix
-      ./system/default.nix
+      ./graphical_session/module.nix
+      ./programming/module.nix
+      ./programs/module.nix
+      ./system/module.nix
     ];
   nixpkgs = {
     config.allowUnfree = true;
