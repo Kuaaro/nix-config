@@ -8,5 +8,6 @@
     drawio
     vial
     qemu
+    virt-manager
   ];
 }
