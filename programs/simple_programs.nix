@@ -7,5 +7,6 @@
     libreoffice
     drawio
     vial
+    qemu
   ];
 }
