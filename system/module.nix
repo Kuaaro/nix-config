@@ -3,7 +3,7 @@
 {
   imports = [
     ./bootloader.nix
-    ./module.nix
+    ./default_apps.nix
     ./hardware.nix
     ./kernel.nix
     ./networking.nix
