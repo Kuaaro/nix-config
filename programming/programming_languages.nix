@@ -9,5 +9,7 @@
     
     zig
     zls
+    
+    texlive.combined.scheme-full
   ];
 }

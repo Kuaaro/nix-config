@@ -13,6 +13,8 @@
         rust-lang.rust-analyzer
         ziglang.vscode-zig
         phind.phind
+        
+        james-yu.latex-workshop
       ];
     })
   ];
