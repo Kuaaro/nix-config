@@ -7,5 +7,7 @@
     libreoffice
     drawio
     vial
+    whatsapp-for-linux
+    webcord
   ];
 }
