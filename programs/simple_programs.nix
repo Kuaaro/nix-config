@@ -9,5 +9,6 @@
     vial
     whatsapp-for-linux
     webcord
+    kicad
   ];
 }
