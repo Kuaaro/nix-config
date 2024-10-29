@@ -6,6 +6,7 @@
     enable = true;
     interactiveShellInit = ''
       set fish_greeting
+      alias st='speedtest-go'
       neofetch
     '';
   };

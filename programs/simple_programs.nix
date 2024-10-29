@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     neofetch
-    speedtest-rs
+    speedtest-go
     libreoffice
     drawio
     vial
