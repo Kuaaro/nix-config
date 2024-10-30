@@ -22,4 +22,10 @@
     };
     useDHCP = lib.mkDefault true;
   };
+  services.zerotierone = {
+  enable = true;
+  joinNetworks = [
+    "c7c8172af18e9f49"
+  ];
+};
 }

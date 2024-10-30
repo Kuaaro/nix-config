@@ -10,6 +10,5 @@
     whatsapp-for-linux
     webcord
     kicad
-    zerotierone
   ];
 }
