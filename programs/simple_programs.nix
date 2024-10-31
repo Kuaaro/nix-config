@@ -11,6 +11,6 @@
     webcord
     kicad
     samba
-    cifs_utils
+    cifs-utils
   ];
 }
