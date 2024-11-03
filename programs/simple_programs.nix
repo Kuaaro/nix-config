@@ -10,7 +10,6 @@
     whatsapp-for-linux
     webcord
     kicad
-    samba
-    cifs-utils
+    inkscape
   ];
 }
