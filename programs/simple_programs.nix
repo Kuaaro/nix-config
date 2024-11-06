@@ -11,5 +11,6 @@
     webcord
     kicad
     inkscape
+    unityhub
   ];
 }
