@@ -13,6 +13,7 @@
         rust-lang.rust-analyzer
         ziglang.vscode-zig
         phind.phind
+        vscode-extension-ms-dotnettools-csdevkit
         
         james-yu.latex-workshop
       ];
