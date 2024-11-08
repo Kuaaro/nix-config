@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
 {
-  
-
   environment.systemPackages = with pkgs; [
     #python3
     (vscode-with-extensions.override {
