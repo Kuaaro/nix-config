@@ -11,9 +11,13 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-vscode-extensions = {
+    	url = "github:nix-community/nix-vscode-extensions";
+    	inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, nixvim, nix-vscode-extensions,  ... } @ inputs:
   let
     #pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in
