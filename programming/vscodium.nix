@@ -23,7 +23,7 @@
   	enableExtensionUpdateCheck = false;
   	
   	extensions = with pkgs.open-vsx; [
-  	`muhammad-sammy.free-csharp-vscode
+  		muhammad-sammy.free-csharp-vscode
   	];
   };
 }
