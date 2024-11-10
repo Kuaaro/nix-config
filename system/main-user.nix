@@ -9,7 +9,7 @@ in
     extraGroups = ["networkmanager"];
 		isNormalUser = true;
 		initialPassword = "12345";
-		description = "main user";
+		description = "kuaaro";
 		shell = pkgs.fish;
 	};
 }
