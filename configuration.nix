@@ -15,6 +15,8 @@
   
   home-manager = {
   	extraSpecialArgs = { inherit inputs; };
+  	useGlobalPkgs = true;
+  	useUserPackages = true;
   	users."kuaaro" = import ./home/home.nix;
   };
   
