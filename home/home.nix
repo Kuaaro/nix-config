@@ -7,8 +7,10 @@
   home.homeDirectory = "/home/kuaaro";
 
 	imports = [
-		#./fish.nix
 		./programming/default.nix
+		
+		./cli_programs.nix
+		./fish.nix
 	];
 
   # This value determines the Home Manager release that your configuration is
