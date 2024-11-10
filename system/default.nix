@@ -10,5 +10,6 @@
 		./main-user.nix
 		./partitions.nix
 		./security.nix
+		./shells.nix
 	];
 }
