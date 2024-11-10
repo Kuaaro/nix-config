@@ -7,8 +7,6 @@
     	
     	./system/default.nix
     ];
-  
-  main-user.userName = "kuaaro";
     
   nixpkgs = {
     config.allowUnfree = true;
@@ -17,7 +15,7 @@
   
   home-manager = {
   	extraSpecialArgs = { inherit inputs; };
-  	users.${main-user.userName} = import ./home/home.nix;
+  	users."kuaaro" = import ./home/home.nix;
   };
   
   nix.settings.experimental-features = [ "nix-command" "flakes"];

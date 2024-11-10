@@ -4,15 +4,7 @@ let
 	cfg = config.main-user;
 in
 {
-
-	options.main-user.userName = lib.mkOption {
-		default = "mainuser";
-		description = ''
-			username
-		'';
-	};
-
-	config.users.users.${cfg.userName} = {
+	config.users.users."kuaaro" = {
 		uid = 1000;
     extraGroups = ["networkmanager"];
 		isNormalUser = true;

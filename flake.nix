@@ -25,7 +25,7 @@
     nixosConfigurations."kuaaros-framework" = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./system/system.nix
+        ./configuration.nix
         inputs.home-manager.nixosModules.default
       ];
     };
