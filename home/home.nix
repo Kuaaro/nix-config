@@ -11,7 +11,8 @@
 		
 		./browsers.nix
 		./cli_programs.nix
-		./gui_programs.nix
+		#./gui_programs.nix
+		./localsend.nix
 		#./fish.nix
 	];
 

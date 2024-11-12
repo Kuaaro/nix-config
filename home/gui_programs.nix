@@ -1,9 +1,9 @@
 { pkgs, ... }:
 
 {
-	home.packages = with pkgs; [
-		localsend
-	];
+	#home.packages = with pkgs; [
+	#	localsend
+	#];
 	
 	#programs = {
 	#	localsend = {
