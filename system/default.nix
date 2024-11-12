@@ -12,6 +12,5 @@
 		./partitions.nix
 		./security.nix
 		./shells.nix
-		./temp.nix
 	];
 }
