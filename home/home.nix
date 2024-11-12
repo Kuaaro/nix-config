@@ -9,7 +9,7 @@
 	imports = [
 		./programming/default.nix
 		
-		./browser.nix
+		./browsers.nix
 		./cli_programs.nix
 		#./gui_programs.nix
 		#./fish.nix
