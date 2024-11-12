@@ -1,7 +1,14 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
 	home.packages = with pkgs; [
-		local-send
+		localsend
 	];
+	
+	#programs = {
+	#	localsend = {
+	#		enable = true;
+	#		openFirewall = true;
+	#	};
+	#};
 }
