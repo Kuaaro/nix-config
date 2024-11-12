@@ -6,6 +6,6 @@
 	];
 	
 	home.sessionVariables = {
-		BROWSER = "${pkgs.brave}/bin/brave"
+		BROWSER = "${pkgs.brave}/bin/brave";
 	};
 }
