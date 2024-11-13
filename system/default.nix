@@ -5,7 +5,7 @@
 		./graphical/default.nix
 		
 		./bootloader.nix
-		#./git.nix
+		./git.nix
 		./hardware.nix
 		./kernel.nix
 		./main-user.nix
