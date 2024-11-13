@@ -9,8 +9,8 @@
 		#	dracula-theme.theme-dracula
 		#];
 		
-		enableExtensionUpdateCheck = false;
-		enableUpdateCheck = false;
-		mutableExtensionsDir = false;
+		#enableExtensionUpdateCheck = false;
+		#enableUpdateCheck = false;
+		#mutableExtensionsDir = false;
 	};
 }
