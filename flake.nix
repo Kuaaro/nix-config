@@ -7,17 +7,17 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #nixvim = {
-    #  url = "github:nix-community/nixvim";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-vscode-extensions = {
     	url = "github:nix-community/nix-vscode-extensions";
     	inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-vscode-extensions, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, nix-vscode-extensions, nixvim, ... } @ inputs:
   let
   	#system = "x86_64-linux";
   in
