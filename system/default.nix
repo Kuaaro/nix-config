@@ -13,5 +13,6 @@
 		./partitions.nix
 		./security.nix
 		./shells.nix
+		./virt.nix
 	];
 }

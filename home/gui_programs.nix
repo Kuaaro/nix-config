@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-	programs = {
-		virt-manager.enable = true;
-	};
+	home.packages = with pkgs; [
+		virt-manager
+	];
 }
