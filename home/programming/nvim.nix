@@ -5,7 +5,9 @@
 		inputs.nixvim.homeManagerModules.nixvim
 	];
 	
-	nixvim = {
+	programs.nixvim = {
 		enable = true;
+		
+		colorschemes.tokyonight.enable = true;
 	};
 }
