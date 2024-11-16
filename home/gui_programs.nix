@@ -1,14 +1,7 @@
 { pkgs, ... }:
 
 {
-	#home.packages = with pkgs; [
-	#	localsend
-	#];
-	
-	#programs = {
-	#	localsend = {
-	#		enable = true;
-	#		openFirewall = true;
-	#	};
-	#};
+	programs = {
+		virt-manager.enable = true;
+	};
 }
