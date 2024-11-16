@@ -6,7 +6,7 @@ in
 {
 	config.users.users."kuaaro" = {
 		uid = 1000;
-    extraGroups = ["networkmanager"];
+    extraGroups = ["networkmanager", "libvirtd"];
 		isNormalUser = true;
 		initialPassword = "12345";
 		description = "kuaaro";
