@@ -5,7 +5,7 @@
 		fastfetch.enable = true;
 	};
 	
-	home.packages = with pkgs; [
-		qemu
-	];
+	#home.packages = with pkgs; [
+	#	qemu
+	#];
 }

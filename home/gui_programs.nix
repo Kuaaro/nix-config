@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-	home.packages = with pkgs; [
-		virt-manager
-	];
+	#home.packages = with pkgs; [
+	#	virt-manager
+	#];
 }
