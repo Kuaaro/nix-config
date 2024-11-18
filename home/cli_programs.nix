@@ -5,7 +5,8 @@
 		fastfetch.enable = true;
 	};
 	
-	#home.packages = with pkgs; [
+	home.packages = with pkgs; [
 	#	qemu
-	#];
+		speedtest-go
+	];
 }
