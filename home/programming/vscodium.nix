@@ -7,11 +7,12 @@ in
 		enable = true;
 		package = pkgs.vscodium;
 		
-		#extensions = with extensions.open-vsx; [#pkgs.vscode-extensions; [
+		extensions = with extensions.open-vsx-release; [#pkgs.vscode-extensions; [
 			#rust-lang.rust-analyzer
 		#	muhammad-sammy.csharp
 		#	ms-dotnettools.vscode-dotnet-runtime
-		#];
+			james-yu.latex-workshop
+		];
 		
 		#userSettings = {
     #  "dotnet.defaultSolution" = "${pkgs.mono}";
