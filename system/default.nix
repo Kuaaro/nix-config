@@ -11,6 +11,7 @@
 		./main-user.nix
 		./networking.nix
 		./partitions.nix
+		./printing.nix
 		./security.nix
 		./shells.nix
 		./virt.nix
