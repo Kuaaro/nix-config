@@ -11,7 +11,7 @@
 			{
 				"flutter.ls_version":2,
 				"flutter.ls_show_token":"345b473f-5cc8-40fb-b3f5-bb90c396fd1d",
-				"flutter.ls_alias":"Kuaaro's Framework x",
+				"flutter.ls_alias":"Kuaaro's Framework",
 				"flutter.ls_color":"system",
 				"flutter.ls_window_offset_x":26.0,
 				"flutter.ls_window_offset_y":23.0,

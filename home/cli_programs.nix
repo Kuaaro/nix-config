@@ -8,5 +8,6 @@
 	home.packages = with pkgs; [
 	#	qemu
 		speedtest-go
+		raider
 	];
 }
