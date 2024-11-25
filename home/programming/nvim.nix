@@ -8,6 +8,10 @@
 	programs.nixvim = {
 		enable = true;
 		
+		viAlias = true;
+		vimAlias = true;
+		
 		colorschemes.tokyonight.enable = true;
+		
 	};
 }

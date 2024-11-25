@@ -12,8 +12,8 @@ in
 		#	muhammad-sammy.csharp
 		#	ms-dotnettools.vscode-dotnet-runtime
 			james-yu.latex-workshop
-			
 			ms-python.python
+			eamodio.gitlens
 		];
 		
 		#userSettings = {
