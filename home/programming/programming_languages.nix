@@ -12,6 +12,7 @@
 			numpy
 			matplotlib
 			pyvista
+			imageio
 		]))
 	];
 }
