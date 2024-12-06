@@ -4,9 +4,8 @@
 	home.packages = with pkgs; [
 		mono
 		texliveFull
-		#python312Packages.python
-		#python312Packages.numpy
-		#python312Packages.matplotlib
+		dotnet-sdk
+		
 		
 		(python312.withPackages(ps: with ps; [ 
 			numpy
@@ -15,4 +14,9 @@
 			imageio
 		]))
 	];
+	
+	environment.variables = {
+		DOTNET_ROOT = "/path/to/your/dotnet/core";
+	};
+
 }
