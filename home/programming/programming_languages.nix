@@ -14,9 +14,5 @@
 			imageio
 		]))
 	];
-	
-	environment.variables = {
-		DOTNET_ROOT = "/path/to/your/dotnet/core";
-	};
 
 }
