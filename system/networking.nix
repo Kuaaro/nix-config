@@ -25,9 +25,9 @@
     nftables.enable = true;
   };
   #services.zerotierone = {
-  #enable = true;
-  #joinNetworks = [
-  #  "c7c8172af18e9f49"
-  #];
+  #	enable = true;
+  #  joinNetworks = [
+  #    "ebe7fbd4452aa3f7"
+  #  ];
 	#};
 }

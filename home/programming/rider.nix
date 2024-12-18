@@ -7,12 +7,12 @@
 	
 	xdg = {
     enable = true;
-    mimeApps = {
-      enable = true;
-      defaultApplications = {
-        "text/x-csharp" = ["jetbrains-rider.desktop"];
-      };
-    };
+  #  mimeApps = {
+  #    enable = true;
+  #    defaultApplications = {
+  #      "text/x-csharp" = ["jetbrains-rider.desktop"];
+  #    };
+  #  };
   };
 
 }

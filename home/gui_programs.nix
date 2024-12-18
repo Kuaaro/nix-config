@@ -5,5 +5,7 @@
 	#	virt-manager
 		unityhub
 		libreoffice
+		kicad
+		alacritty
 	];
 }
