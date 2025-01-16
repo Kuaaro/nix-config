@@ -7,5 +7,6 @@
 		libreoffice
 		kicad
 		alacritty
+		anytype
 	];
 }
