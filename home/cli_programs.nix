@@ -10,4 +10,9 @@
 		speedtest-go
 		raider
 	];
+	
+	services.ollama = {
+    enable = true;
+    acceleration = "rocm";
+  };
 }
