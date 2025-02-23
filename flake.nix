@@ -15,11 +15,12 @@
             (./. + "/hosts/${hostname}/hardware-configuration.nix")
             (./. + "/hosts/${hostname}/default.nix")
             inputs.home-manager.nixosModules.home-manager {
-                home-manager = {
+              home-manager = {
                 useUserPackages = true;
                 useGlobalPkgs = true;
                 extraSpecialArgs = { inherit inputs; };
-                };
+                users.kuaaro.home.stateVersion = "24.05";
+              };
             }
             #nixos-hardware.nixosModules."${config.commons.hardware}"
           ];

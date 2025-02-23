@@ -4,13 +4,14 @@ with lib;
 let cfg = config.modules.programs.localsend;
 
 in {
-  options.module.programs.localsend = {
+  options.modules.programs.localsend = {
     enable = mkEnableOption "localsend";
     deviceName = mkOption {
       type = types.str;
       default = "";
     };
   };
+  
   config = mkIf cfg.enable {
     programs.localsend = {
       enable = true;

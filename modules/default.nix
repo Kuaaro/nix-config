@@ -4,6 +4,7 @@
   imports = [
     ./partitions.nix
     ./gnome.nix
-    ./programs/localsend.nix
+    ./main_user.nix
+    ./programs/default.nix
   ];
 }
