@@ -8,10 +8,29 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" ];
-  boot.initrd.kernelModules = [ "dm-snapshot" ];
-  boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
+  boot = {
+    initrd = {
+      availableKernelModules = [
+        "nvme"
+        "xhci_pci"
+        "thunderbolt"
+      ];
+      kernelModules = [
+        "dm-snapshot"
+      ];
+    };
+    
+    kernelModules = [
+      "kvm-amd"
+    ];
+    
+    #extraModulePackages = [ ];
+  };
+
+  #boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" ];
+  #boot.initrd.kernelModules = [ "dm-snapshot" ];
+  #boot.kernelModules = [ "kvm-amd" ];
+  #boot.extraModulePackages = [ ];
 
   #fileSystems."/" =
   #  { device = "/dev/disk/by-uuid/94e457c0-7f07-4287-b08e-b5c2d13c770c";

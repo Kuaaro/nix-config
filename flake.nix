@@ -1,5 +1,5 @@
 {
-  outputs = { nixpkgs, ... }@inputs:
+  outputs = { nixpkgs, home-manager, nixos-hardware, ... }@inputs:
     let
       mkSystem = pkgs: system: hostname:
         pkgs.lib.nixosSystem {
@@ -14,6 +14,14 @@
             ./modules/default.nix
             (./. + "/hosts/${hostname}/hardware-configuration.nix")
             (./. + "/hosts/${hostname}/default.nix")
+            inputs.home-manager.nixosModules.home-manager {
+                home-manager = {
+                useUserPackages = true;
+                useGlobalPkgs = true;
+                extraSpecialArgs = { inherit inputs; };
+                };
+            }
+            #nixos-hardware.nixosModules."${config.commons.hardware}"
           ];
           specialArgs = { inherit inputs; };
         };
@@ -25,5 +33,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 }
