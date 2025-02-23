@@ -1,10 +1,10 @@
 { pkgs, lib, config, home-manager, ...}:
 
 with lib;
-let cfg = config.modules.program.localsend;
+let cfg = config.modules.programs.localsend;
 
 in {
-  options.module.program.localsend = {
+  options.module.programs.localsend = {
     enable = mkEnableOption "localsend";
     deviceName = mkOption {
       type = types.str;
