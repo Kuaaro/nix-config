@@ -4,9 +4,9 @@ with lib;
 let cfg = config.modules.bootloader;
 
 in {
-  options.module.bootloader = {
+  options.modules.bootloader = {
     bootloader = mkOption {
-      type = types.enum ["systemd-boot", "grub"];
+      type = types.enum ["systemd-boot" "grub"];
       default = "systemd-boot";
       description = "Which bootloader to use";
     };
