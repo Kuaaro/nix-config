@@ -20,14 +20,16 @@
       };
     };
     bootloader = {
-      bootloader = "grub"
-      plymouth = "loader_alt"
+      bootloader = "systemd-boot";
+      plymouth_theme = "loader_alt";
     };
     programming = {
       git = {
         enable = true;
-        e-mail = "that.kuaaro@gmail.com"
+        e-mail = "that.kuaaro@gmail.com";
       };
     };
+    printing.enable = true;
+    security.escal_tool = "doas";
   };
 }

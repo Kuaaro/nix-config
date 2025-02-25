@@ -7,9 +7,9 @@ in {
   options.modules.programming.git = {
     enable = mkEnableOption "git";
     e-mail = mkOption {
-      type = lib.types.strMatching "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}" "email address";
+      type = types.strMatching "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}";
       example = "user@example.com";
-      desxription = "e-mail to be used";
+      description = "Email address configuration";
     };
   };
   

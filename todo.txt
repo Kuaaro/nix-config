@@ -1,10 +1,10 @@
 bootloader !
-git
-kernel
-main user - shell
-networking
-printing
-security
+git !
+kernel !
+main user - shell 
+networking !
+printing !
+security 
 shells (fish)
 gnome (fix)
 brave
