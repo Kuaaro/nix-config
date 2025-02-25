@@ -10,10 +10,10 @@ in {
       default = "systemd-boot";
       description = "Which bootloader to use";
     };
-    plymouth_theme = mkOpton {
+    plymouth_theme = mkOption {
       type = types.enum [ "" "loader_alt" ];
       default = "";
-      description = "Wheather to enable plymouth and which theme to use"
+      description = "Wheather to enable plymouth and which theme to use";
     };
   };
   
@@ -35,10 +35,10 @@ in {
       verbose = false;
     };
     consoleLogLevel = 3;
-    plymouth = mkIf (cfg.plymouth != "") {
+    plymouth = mkIf (cfg.plymouth_theme != "") {
       enable = true;
       themePackages = [ pkgs.adi1090x-plymouth-themes ];
-      theme = "${cfg.plymouth}";
+      theme = "${cfg.plymouth_theme}";
     };
     #kernelModules = [ "kvm-amd" ];
   };

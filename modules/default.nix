@@ -7,5 +7,6 @@
     ./gnome.nix
     ./main_user.nix
     ./programs/default.nix
+    ./programming/default.nix
   ];
 }

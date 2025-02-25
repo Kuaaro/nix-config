@@ -19,5 +19,15 @@
         deviceName = "Kuaaro's Framework (ceres)";
       };
     };
+    bootloader = {
+      bootloader = "grub"
+      plymouth = "loader_alt"
+    };
+    programming = {
+      git = {
+        enable = true;
+        e-mail = "that.kuaaro@gmail.com"
+      };
+    };
   };
 }
