@@ -4,7 +4,11 @@ with lib;
 let cfg = config.modules.programming;
 
 in {
-  options.modules.programming = { vscodium = mkEnableOption "programming vscodium"; };
+  options.modules.programming = {
+    vscodium = mkEnableOption "vscodium";
+    rider = mkEnableOption "rider";
+  };
+  
   config.home-manager.users."${config.commons.main_username}" = {
     programs = mkIf cfg.vscodium {
       vscode = {
@@ -20,10 +24,9 @@ in {
 			  #  eamodio.gitlens
 		    #];
 	    };
-	    
-	    home.packages = with pkgs; [
-		    jetbrains.rider
-	    ];
 	  };
+	  home.packages = [
+		    ( mkIf cfg.rider pkgs.jetbrains.rider )
+	  ];
   };
 }
