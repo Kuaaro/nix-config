@@ -1,14 +1,17 @@
 { pkgs, lib, config, ...}:
 
 with lib;
+let
+  addToWheel = config.modules.security.escal_tool == "sudo";
+  main_username = config.commons.main_username;
+in
 {
-  config.users.users."${config.commons.main_username}" = {
+  config.users.users."${main_username}" = {
 		uid = 1000;
-    extraGroups = ["networkmanager"];# "libvirtd"
+    extraGroups = optionals addToWheel [ "wheel" ] ++ [ "networkmanager" ];
 		isNormalUser = true;
 		initialPassword = "12345";
-		description = "kuaaro";
-		#shell = pkgs.fish;
+		description = "${main_username}";
 	};
 }
 

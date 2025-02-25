@@ -1,8 +1,9 @@
-{ pkgs, lib, config, ...}:
+{ pkgs, lib, config, ... }:
 
 with lib;
-let cfg = config.modules.security;
-
+let 
+  cfg = config.modules.security;
+  main_username = config.commons.main_username;
 in {
   options.modules.security = {
     escal_tool = mkOption {
@@ -11,23 +12,20 @@ in {
       description = "Escalation tool";
     };
   };
-  config = {
-    mkIf (cfg.escal_tool == "sudo") {
-      security.sudo = {
-        enable = true;
-        users = [ "${cfg.commons.main_username}" ];
-      };
-    };
-    mkIf (cfg.escal_tool == "doas") {
+
+  config = mkMerge [
+    (mkIf (cfg.escal_tool == "sudo") {
+      security.sudo.enable = true;
+      #security.sudo.users = [ "${main_username}" ];
+    })
+    (mkIf (cfg.escal_tool == "doas") {
       security.sudo.enable = false;
-      doas = {
-        enable = true;
-        extraRules = [{
-          users = [ "${cfg.commons.main_username}" ];
-	        keepEnv = true;
-	        persist = true;
-        }];
-    };
-    };
-  };
+      security.doas.enable = true;
+      security.doas.extraRules = [{
+        users = [ "${main_username}" ];
+        keepEnv = true;
+        persist = true;
+      }];
+    })
+  ];
 }

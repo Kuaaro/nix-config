@@ -18,6 +18,7 @@
         enable = true;
         deviceName = "Kuaaro's Framework (ceres)";
       };
+      brave = true;
     };
     bootloader = {
       bootloader = "systemd-boot";
