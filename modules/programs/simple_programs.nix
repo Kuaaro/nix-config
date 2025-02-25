@@ -18,19 +18,20 @@ in {
   };
   
   config.home-manager.users."${config.commons.main_username}".home = {
-    packages =
-      options cfg.brave [ "brave" ] ++
-      options cfg.brave [ "fastfetch" ] ++
-      options cfg.brave [ "speedtest-go" ] ++
-      options cfg.brave [ "raider" ] ++
-      options cfg.brave [ "unityhub" ] ++
-      options cfg.brave [ "libreoffice" ] ++
-      options cfg.brave [ "kicad" ] ++
-      options cfg.brave [ "alacritty" ] ++
-      options cfg.brave [ "anytype" ] ++
-      options cfg.brave [ "godot_4" ];
+    packages = with pkgs; [
+      (mkIf cfg.brave brave)
+      (mkIf cfg.fastfetch fastfetch)
+      (mkIf cfg.speedtest-go speedtest-cli)
+      (mkIf cfg.raider raider)
+      (mkIf cfg.unityhub unityhub)
+      (mkIf cfg.libreoffice libreoffice)
+      (mkIf cfg.kicad kicad)
+      (mkIf cfg.alacritty alacritty)
+      (mkIf cfg.anytype anytype)
+      (mkIf cfg.godot godot_4)
+      ];
     
-    home.sessionVariables = {
+    sessionVariables = {
 		  BROWSER = mkIf cfg.brave "${pkgs.brave}/bin/brave";
 	  };
 	};

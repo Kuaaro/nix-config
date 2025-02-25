@@ -4,12 +4,12 @@ kernel !
 main user - shell 
 networking !
 printing !
-security 
+security !
 shells (fish)
 gnome (fix)
-brave
+brave !
 fastfetch,speedtest-go,raider
-unity? + libreoffice,kicad,alacritty,anytype,godot
+unity? + libreoffice,kicad,alacritty,anytype,godot !
 nvim?
 rider
 vscodium

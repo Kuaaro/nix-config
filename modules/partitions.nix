@@ -4,12 +4,12 @@ with lib;
 let cfg = config.modules.partitions; in {
   options.modules.partitions = {
     root-fs = mkOption {
-      type = types.str;
+      type = types.enum [ "ext4" "btrfs" ];
       default = "btrfs";
       description = "Filesystem to be used for root (/) partition";
     };
     home-fs = mkOption {
-      type = types.str;
+      type = types.enum [ "ext4" "btrfs" "" ];
       default = "";
       description = "Filesystem to be used for home (/home) partition";
     };
@@ -17,8 +17,6 @@ let cfg = config.modules.partitions; in {
     luks = mkEnableOption "luks partition";
   };
 
-
-  # Configuration goes directly under the root level
   config = {
     swapDevices = mkIf cfg.swap [
       {device = "/dev/disk/by-label/SWAP"; }

@@ -29,8 +29,12 @@
         enable = true;
         e-mail = "that.kuaaro@gmail.com";
       };
+      vscodium = true;
     };
     printing.enable = true;
-    security.escal_tool = "doas";
+    security = {
+      fingerprint = true;
+      escal_tool = "doas";
+    ];
   };
 }
