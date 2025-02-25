@@ -35,6 +35,6 @@
     security = {
       fingerprint = true;
       escal_tool = "doas";
-    ];
+    };
   };
 }

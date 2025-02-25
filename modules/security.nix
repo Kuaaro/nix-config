@@ -14,25 +14,22 @@ in {
     fingerprint = mkEnableOption "fingerprint";
   };
 
-  config = {
-    mkMerge [
-      (mkIf (cfg.escal_tool == "sudo") {
-        security.sudo.enable = true;
-        #security.sudo.users = [ "${main_username}" ];
-      })
-      (mkIf (cfg.escal_tool == "doas") {
-        security.sudo.enable = false;
-        security.doas.enable = true;
-        security.doas.extraRules = [{
-          users = [ "${main_username}" ];
-          keepEnv = true;
-          persist = true;
-        }];
-      })
-    ];
-    
-    services.fprintd = mkIf cfg.fingerprint {
-      enable = true;
-    };
-  };
+  config = mkMerge [
+    (mkIf (cfg.escal_tool == "sudo") {
+      security.sudo.enable = true;
+      #security.sudo.users = [ "${main_username}" ];
+    })
+    (mkIf (cfg.escal_tool == "doas") {
+      security.sudo.enable = false;
+      security.doas.enable = true;
+      security.doas.extraRules = [{
+        users = [ "${main_username}" ];
+        keepEnv = true;
+        persist = true;
+      }];
+    })
+    (mkIf cfg.fingerprint {
+      services.fprintd.enable = true;
+    })
+  ];
 }

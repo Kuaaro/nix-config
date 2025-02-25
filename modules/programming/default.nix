@@ -2,7 +2,7 @@
 
 {
   imports = [
+    ./editors.nix
     ./git.nix
-    ./vscodium.nix
   ];
 }
