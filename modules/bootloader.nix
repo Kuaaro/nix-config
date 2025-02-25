@@ -10,14 +10,36 @@ in {
       default = "systemd-boot";
       description = "Which bootloader to use";
     };
+    plymouth_theme = mkOpton {
+      type = types.enum [ "" "loader_alt" ];
+      default = "";
+      description = "Wheather to enable plymouth and which theme to use"
+    };
   };
-  config.boot.loader = {
-    timeout = 2;
-    systemd-boot = mkIf (cfg.bootloader == "systemd-boot") {
-      enable = true;
+  
+  config.boot = {
+    loader = {
+      systemd-boot = mkIf (cfg.bootloader == "systemd-boot") {
+        enable = true;
+      };
+      grub = mkIf (cfg.bootloader == "grub") {
+        enable = true;
+      };
+      
+      efi.canTouchEfiVariables = true;
+      timeout = 2;
     };
-    grub = mkIf (cfg.bootloader == "grub") {
+    initrd = {
       enable = true;
+      systemd.enable = true;
+      verbose = false;
     };
+    consoleLogLevel = 3;
+    plymouth = mkIf (cfg.plymouth != "") {
+      enable = true;
+      themePackages = [ pkgs.adi1090x-plymouth-themes ];
+      theme = "${cfg.plymouth}";
+    };
+    #kernelModules = [ "kvm-amd" ];
   };
 }
