@@ -8,9 +8,9 @@ security !
 shells (fish)
 gnome (fix)
 brave !
-fastfetch,speedtest-go,raider
+fastfetch,speedtest-go,raider !
 unity? + libreoffice,kicad,alacritty,anytype,godot !
 nvim?
-rider
-vscodium
-programming languages
+rider !
+vscodium !
+programming languages !

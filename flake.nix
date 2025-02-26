@@ -4,11 +4,13 @@
       mkSystem = pkgs: system: hostname:
         pkgs.lib.nixosSystem {
           system = system;
+          #configurations.pkgs.config.allowUnfree = true;
           modules = [
             {
               system.stateVersion = "24.05";
               networking.hostName = hostname;
               nix.settings.experimental-features = [ "flakes" "nix-command"];
+              nixpkgs.config.allowUnfree = true;
             }
             ./common.nix
             ./modules/default.nix

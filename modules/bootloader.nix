@@ -11,7 +11,7 @@ in {
       description = "Which bootloader to use";
     };
     plymouth_theme = mkOption {
-      type = types.enum [ "" "loader_alt" ];
+      type = types.enum [ "" "loader_alt" "blahaj"];
       default = "";
       description = "Wheather to enable plymouth and which theme to use";
     };
@@ -37,7 +37,7 @@ in {
     consoleLogLevel = 3;
     plymouth = mkIf (cfg.plymouth_theme != "") {
       enable = true;
-      themePackages = [ pkgs.adi1090x-plymouth-themes ];
+      themePackages = [ pkgs.adi1090x-plymouth-themes plymouth-blahaj-theme];
       theme = "${cfg.plymouth_theme}";
     };
     #kernelModules = [ "kvm-amd" ];
