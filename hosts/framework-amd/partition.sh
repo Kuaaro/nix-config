@@ -1,14 +1,14 @@
 #!/bin/sh
 
-DEVICE="/dev/sda"
-LUKS_CONTAINER_NAME="encrypted"
-CONTAINER_NAME="encrypted_volume"
+DEVICE="/dev/nvme0n1"
+LUKS_CONTAINER_NAME="luks"
+CONTAINER_NAME="crypt"
 
-LUKS_LABEL="LUKSLABEL"
-BOOT_LABEL="BOOTLABEL"
-ROOT_LABEL="ROOTLABEL"
-SWAP_LABEL="SWAPLABEL"
-HOME_LABEL="HOMELABEL"
+LUKS_LABEL="LUKS"
+BOOT_LABEL="BOOT"
+ROOT_LABEL="ROOT"
+SWAP_LABEL="SWAP"
+HOME_LABEL="HOME"
 
 #BAD CODE
 #if ! ls /dev | grep -q "$DEVICE"; then
@@ -42,8 +42,8 @@ echo "123" | cryptsetup luksOpen "/dev/disk/by-label/${LUKS_LABEL}" "${LUKS_CONT
 pvcreate "/dev/mapper/${LUKS_CONTAINER_NAME}"
 vgcreate $CONTAINER_NAME "/dev/mapper/${LUKS_CONTAINER_NAME}"
 lvcreate -L 32799182848B $CONTAINER_NAME -n swap
-lvcreate -L 10G $CONTAINER_NAME -n root
-lvcreate -L 10G $CONTAINER_NAME -n home
+lvcreate -L 200G $CONTAINER_NAME -n root
+lvcreate -L 200G $CONTAINER_NAME -n home
 
 
 mkfs -t ext4 -L "$ROOT_LABEL" "/dev/mapper/${CONTAINER_NAME}-root"
