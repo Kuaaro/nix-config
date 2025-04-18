@@ -6,18 +6,22 @@
     firewall = {
       enable = true;
 
-      #allowedTCPPorts = [
+      allowedTCPPorts = [
         #LocalSend
       #  53317
         #SyncThing
       #  8384 22000
-      #];
-      #allowedUDPPorts = [
+        #Orca slicer
+        2021
+      ];
+      allowedUDPPorts = [
         #LocalSend
       #  53317
         #SyncThing
       #  22000 21027
-      #];
+        #orca slicer
+        2021
+      ];
     };
     useDHCP = lib.mkDefault true;
     

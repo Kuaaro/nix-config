@@ -5,7 +5,7 @@ let cfg = config.modules;
 
 in {
   options.modules = { printing = mkEnableOption "printing"; };
-  config = mkIf cfg.enable {
+  config = mkIf cfg.printing {
     services = {
 		printing.enable = true;
 		  avahi = {

@@ -6,13 +6,17 @@
   ];
 
   config.modules = {
+    zsh = true;
     partitions = {
       swap = true;
       luks = true;
-      #home-fs = "btrfs";
-      root-fs = "btrfs";
+      home-fs = "btrfs";
+      root-fs = "ext4";
     };
     gnome = true;
+
+    #hyprland = true;
+    
     programs = {
       localsend = {
         enable = true;
@@ -21,13 +25,16 @@
       brave = true;
       fastfetch = true;
       speedtest-go = true;
-      #raider = raider;
-      unityhub = true;
+      #raider = true;
+      #unityhub = true;
 		  libreoffice = true;
-		  kicad = true;
+		  #kicad = true;
 		  alacritty = true;
 		  anytype = true;
 		  godot  = true;
+		  #blender = true;
+		  orca-slicer  = true;
+		  ppsspp = true;
     };
     bootloader = {
       bootloader = "systemd-boot";
@@ -39,10 +46,11 @@
         e-mail = "that.kuaaro@gmail.com";
       };
       vscodium = true;
-      rider = true;
+      #rider = true;
       languages = {
         python = true;
-        latex = true;
+        rust = true;
+      #  latex = true;
       };
     };
     printing = true;

@@ -37,7 +37,7 @@ in {
     consoleLogLevel = 3;
     plymouth = mkIf (cfg.plymouth_theme != "") {
       enable = true;
-      themePackages = [ pkgs.adi1090x-plymouth-themes plymouth-blahaj-theme];
+      themePackages = [ pkgs.adi1090x-plymouth-themes pkgs.plymouth-blahaj-theme];
       theme = "${cfg.plymouth_theme}";
     };
     #kernelModules = [ "kvm-amd" ];

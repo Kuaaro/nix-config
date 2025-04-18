@@ -1,0 +1,23 @@
+{
+  "settings": {
+    "default_search_provider_data": {
+      "default": {
+        "encoding": "UTF-8",
+        "id": "duckduckgo",
+        "enabled": true,
+        "name": "DuckDuckGo",
+        "keyword": ":d",
+        "search_url": "https://duckduckgo.com/?q={searchTerms}",
+        "suggest_url": "https://ac.duckduckgo.com/ac/?q={searchTerms}"
+      },
+      "custom_search_engines": [{
+        "id": "google",
+        "enabled": true,
+        "name": "Google",
+        "keyword": ":g",
+        "search_url": "https://www.google.com/search?q={searchTerms}",
+        "suggest_url": "https://www.google.com/suggest?q={searchTerms}"
+      }]
+    }
+  }
+}

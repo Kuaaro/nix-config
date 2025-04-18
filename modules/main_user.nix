@@ -12,6 +12,8 @@ in
 		isNormalUser = true;
 		initialPassword = "12345";
 		description = "${main_username}";
+		shell = mkIf config.modules.zsh pkgs.zsh;
+		ignoreShellProgramCheck = true;
 	};
 }
 
